@@ -1,0 +1,24 @@
+---
+title: "GradeCalculator"
+author:
+- name: "James Holdaway"
+  affiliation: "NCSU Undergraduate Statistics"
+format: html
+editor: visual
+---
+
+```{r}
+overall_grade <- function() {
+  final <- readline(prompt="What grade did you get on your final? ")
+  final <- as.numeric(final)
+  midterm <- readline(prompt="What grade did you get on your midterm? ")
+  midterm <- as.numeric(midterm)
+  homework <- readline(prompt="What overall grade did you got across your homework? ")
+  homework <- as.numeric(homework)
+  
+  print(final*.50 + midterm*.30 + homework*.20)
+}
+
+overall_grade()
+```
+
