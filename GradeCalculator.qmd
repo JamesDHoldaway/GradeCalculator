@@ -1,9 +1,12 @@
 ---
-title: "GradeCalculator"
+title: "Grade Calculator"
 author:
 - name: "James Holdaway"
   affiliation: "NCSU Undergraduate Statistics"
 format: html
+engine: knitr
+filters: 
+ - webr
 editor: visual
 ---
 
@@ -21,4 +24,3 @@ overall_grade <- function() {
 
 overall_grade()
 ```
-
