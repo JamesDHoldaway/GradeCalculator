@@ -10,16 +10,29 @@ filters:
 editor: visual
 ---
 
-```{r}
+```{webr-r}
+#| context: interactive
+
 overall_grade <- function() {
-  final <- readline(prompt="What grade did you get on your final? ")
-  final <- as.numeric(final)
-  midterm <- readline(prompt="What grade did you get on your midterm? ")
-  midterm <- as.numeric(midterm)
-  homework <- readline(prompt="What overall grade did you got across your homework? ")
-  homework <- as.numeric(homework)
-  
-  print(final*.50 + midterm*.30 + homework*.20)
+  weights <- c(final = 0.25, 
+               quizzes = 0.15, 
+               midterm1 = 0.15, 
+               homework = 0.15, 
+               github = 0.025, 
+               lab = 0.025, 
+               attendance = 0.05, 
+               progstatexp = 0.05, 
+               proficiencytest = 0.15)
+  scores <- c(final = 92, 
+             quizzes = 98, 
+             midterm1 = 88, 
+             homework = 95, 
+             github = 100, 
+             lab = 90, 
+             attendance = 100, 
+             progstatexp = 100, 
+             proficiencytest = 95)
+  sum(scores*weights)
 }
 
 overall_grade()
