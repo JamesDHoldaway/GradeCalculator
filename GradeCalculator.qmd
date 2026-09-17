@@ -25,15 +25,15 @@ overall_grade <- function() {
                attendance = 0.05, 
                progstatexp = 0.05, 
                proficiencytest = 0.15)
-  scores <- c(final = 92, 
-             quizzes = 98, 
-             midterm1 = 88, 
-             homework = 95, 
+  scores <- c(final = 100, 
+             quizzes = 100, 
+             midterm1 = 100, 
+             homework = 100, 
              github = 100, 
-             lab = 90, 
+             lab = 100, 
              attendance = 100, 
              progstatexp = 100, 
-             proficiencytest = 95)
+             proficiencytest = 100)
   sum(scores[names(weights)]*weights)
 }
 
