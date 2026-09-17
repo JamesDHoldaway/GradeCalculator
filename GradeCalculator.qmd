@@ -3,7 +3,9 @@ title: "Grade Calculator"
 author:
 - name: "James Holdaway"
   affiliation: "NCSU Undergraduate Statistics"
-format: html
+format:
+ html: 
+  output-file: index
 engine: knitr
 filters: 
  - webr
@@ -32,7 +34,7 @@ overall_grade <- function() {
              attendance = 100, 
              progstatexp = 100, 
              proficiencytest = 95)
-  sum(scores*weights)
+  sum(scores[names(weights)]*weights)
 }
 
 overall_grade()
